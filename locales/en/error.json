@@ -1,0 +1,14 @@
+{
+    "general_error_message": "An error occurred.",
+    "general_error_details": "An error occurred. Please try again later.",
+    "general_error_suggestion": "Please try again later.",
+    "too_many_requests_message": "Too many requests. Please try again later.",
+    "too_many_requests_details": "You have exceeded the maximum number of requests allowed. Please try again later.",
+    "too_many_requests_suggestion": "Please try again later.",
+    "invalidPackageMessage": "Invalid package.json file.",
+    "invalidPackageDetails": "The package.json file is invalid. Please check the file and try again.",
+    "invalidPackageSuggestion": "Please check the package.json file and try again.",
+    "routeNotFoundMessage": "Route not found.",
+    "routeNotFoundDetails": "The route you are trying to access does not exist.",
+    "routeNotFoundSuggestion": "Please check the URL and try again."
+}

@@ -1,0 +1,6 @@
+export const ERROR_CODES = {
+    TOO_MANY_REQUESTS: 'E000',
+    GENERAL_ERROR: 'E001',
+    INVALID_JSON_CONFIG: 'E002',
+    ROUTE_NOT_FOUND: 'E003',
+};

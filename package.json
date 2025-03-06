@@ -1,0 +1,47 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build": "tsc",
+    "start": "node build/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-ruid": "^1.1.5",
+    "express-useragent": "^1.0.15",
+    "helmet": "^8.0.0",
+    "i18next": "^24.2.2",
+    "i18next-fs-backend": "^2.6.0",
+    "i18next-http-middleware": "^3.7.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/compression": "^1.7.5",
+    "@types/express": "^5.0.0",
+    "@types/express-useragent": "^1.0.5",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.9",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  }
+}
