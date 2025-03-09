@@ -1,8 +1,9 @@
 import type { Request, Response } from 'express';
 
-import { ApiError } from '../error/ApiError';
-import { STATUS_CODES } from '../constant/status.codes';
 import { ERROR_CODES } from '../constant/error.codes';
+import { STATUS_CODES } from '../constant/status.codes';
+import { ApiError } from '../error/ApiError';
+import logger from '../logger/winston.logger';
 
 /**
  * Route not found handler
@@ -12,6 +13,8 @@ import { ERROR_CODES } from '../constant/error.codes';
  */
 export const routeNotFoundHandler = (req: Request, res: Response) => {
     const t = req.t;
+
+    logger.warn(`Route not found: ${req.method} ${req.originalUrl}`);
 
     throw new ApiError(
         STATUS_CODES.ROUTE_NOT_FOUND,

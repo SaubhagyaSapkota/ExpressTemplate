@@ -1,4 +1,7 @@
 {
     "welcome": "API मा स्वागत छ",
-    "good_api_health_check": "API राम्रो अवस्थामा छ"
+    "good_api_health_check": "API स्वस्थ छ",
+    "api_slow_down_test": "API स्लो डाउन परीक्षण",
+    "no_delay": "कुनै ढिलाइ छैन",
+    "request_being_slowed_down": "अनुरोध ढिलो गरिँदैछ"
 }

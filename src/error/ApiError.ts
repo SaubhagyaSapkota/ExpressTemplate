@@ -16,7 +16,7 @@ export class ApiError extends Error {
         this.errorCode = errorCode;
         this.details = details;
         this.suggestion = suggestion;
-        
+
         this.timestamp = new Date();
     }
 }

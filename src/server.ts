@@ -1,6 +1,9 @@
+import { networkInterfaces } from 'os';
+
 import app from './app';
 import { env } from './config/env';
-import logger from './config/winston';
+import logger from './logger/winston.logger';
+import { getLocalIp } from './utils/getLocalIp';
 
 const startServer = () => {
     try {
@@ -13,7 +16,9 @@ const startServer = () => {
 
         // initialize the server
         const server = app.listen(env.app.PORT, () => {
-            logger.info(`Server is running at ${`http://localhost:${env.app.PORT}`} in ${env.app.ENV} mode`);
+            logger.info(
+                `\nServer is running on ${env.app.NODE_ENV} mode\n- Local   ${`http://localhost:${env.app.PORT}\n- Netwrok ${`http://${getLocalIp()}:${env.app.PORT}`}`}`,
+            );
         });
 
         // handle server errors

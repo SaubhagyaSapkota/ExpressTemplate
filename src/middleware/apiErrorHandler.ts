@@ -1,9 +1,10 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
-import { ApiError } from '../error/ApiError';
-import { STATUS_CODES } from '../constant/status.codes';
 import { ERROR_CODES } from '../constant/error.codes';
+import { STATUS_CODES } from '../constant/status.codes';
+import { ApiError } from '../error/ApiError';
 import { apiErrorFormat } from '../error/apiErrorFormat';
+import logger from '../logger/winston.logger';
 
 export function apiErrorHandler(err: ApiError, req: Request, res: Response, next: NextFunction) {
     const t = req.t;
@@ -21,6 +22,9 @@ export function apiErrorHandler(err: ApiError, req: Request, res: Response, next
 
     // Format the error
     const formatedError = apiErrorFormat(req, error);
+
+    // Log the error on console in english
+    logger.error(formatedError.error.message);
 
     // Send error response
     res.status(error.statusCode).json(formatedError);

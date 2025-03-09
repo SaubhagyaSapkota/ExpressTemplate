@@ -1,14 +1,15 @@
 {
-    "general_error_message": "एउटा त्रुटि भयो।",
-    "general_error_details": "एउटा त्रुटि भयो। कृपया पछि पुनः प्रयास गर्नुहोस्।",
-    "general_error_suggestion": "कृपया पछि पुनः प्रयास गर्नुहोस्।",
-    "too_many_requests_message": "धेरै अनुरोधहरू। कृपया पछि पुनः प्रयास गर्नुहोस्।",
-    "too_many_requests_details": "तपाईंले अनुमति दिइएको अधिकतम अनुरोध संख्या नाघ्नुभयो। कृपया पछि पुनः प्रयास गर्नुहोस्।",
-    "too_many_requests_suggestion": "कृपया पछि पुनः प्रयास गर्नुहोस्।",
-    "invalidPackageMessage": "अवैध package.json फाइल।",
-    "invalidPackageDetails": "package.json फाइल अवैध छ। कृपया फाइल जाँच गरेर फेरि प्रयास गर्नुहोस्।",
-    "invalidPackageSuggestion": "कृपया package.json फाइल जाँच गरेर फेरि प्रयास गर्नुहोस्।",
+    "general_error_message": "त्रुटि भयो।",
+    "general_error_details": "त्रुटि भयो। कृपया पछि फेरि प्रयास गर्नुहोस्।",
+    "general_error_suggestion": "कृपया पछि फेरि प्रयास गर्नुहोस्।",
+    "too_many_requests_message": "धेरै अनुरोधहरू। कृपया पछि फेरि प्रयास गर्नुहोस्।",
+    "too_many_requests_details": "तपाईंले अनुमति दिइएको अधिकतम अनुरोधहरूको संख्या नाघ्नुभएको छ। कृपया पछि फेरि प्रयास गर्नुहोस्।",
+    "too_many_requests_suggestion": "कृपया पछि फेरि प्रयास गर्नुहोस्।",
+    "invalidPackageMessage": "अमान्य package.json फाइल।",
+    "invalidPackageDetails": "package.json फाइल अमान्य छ। कृपया फाइल जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
+    "invalidPackageSuggestion": "कृपया package.json फाइल जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
     "routeNotFoundMessage": "मार्ग फेला परेन।",
-    "routeNotFoundDetails": "तपाईंले पहुँच गर्न खोजेको मार्ग अवस्थित छैन।",
-    "routeNotFoundSuggestion": "कृपया URL जाँच गरेर फेरि प्रयास गर्नुहोस्।"
+    "routeNotFoundDetails": "तपाईंले पहुँच गर्न खोज्नुभएको मार्ग अवस्थित छैन।",
+    "routeNotFoundSuggestion": "कृपया URL जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
+    "throttleing_message": "अनुरोध दर सीमित: तपाईंको अनुरोधहरूमा अब प्रगतिशील ढिलाइहरू लागू गरिएको छ।"
 }
