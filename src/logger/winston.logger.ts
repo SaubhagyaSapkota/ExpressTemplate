@@ -19,17 +19,17 @@ const levels = {
  * These colors will be applied when viewing logs in a terminal that supports ANSI colors.
  */
 winston.addColors({
-    error: 'red', // Critical issues
-    warn: 'yellow', // Potential issues
-    info: 'blue', // General information
-    http: 'magenta', // HTTP request information
-    debug: 'white', // Detailed debugging information
+    error: 'red',
+    warn: 'yellow',
+    info: 'blue',
+    http: 'magenta',
+    debug: 'white',
 });
 
 /**
- * Custom log formatting configuration.
+ * Custom log formatting configuration for file outputs.
  */
-const format = winston.format.combine(
+const fileFormat = winston.format.combine(
     winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     winston.format.printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`),
 );
@@ -39,20 +39,28 @@ const format = winston.format.combine(
  * For files and console.
  */
 const transports = [
-    new winston.transports.Console({
-        format: winston.format.combine(winston.format.colorize({ all: true })),
-    }),
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'logs/info.log', level: 'info' }),
-    new winston.transports.File({ filename: 'logs/http.log', level: 'http' }),
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error', format: fileFormat }),
+    new winston.transports.File({ filename: 'logs/info.log', level: 'info', format: fileFormat }),
+    new winston.transports.File({ filename: 'logs/http.log', level: 'http', format: fileFormat }),
 ];
 
 const logger = winston.createLogger({
-    levels, // Use custom severity levels
-    format, // Apply the custom format defined above
-    transports, // Use the configured transports
-    // Dynamically set minimum log level based on environment
+    levels,
+    transports,
     level: process.env.NODE_ENV === 'development' ? 'debug' : 'info',
 });
+
+// Add console transport with proper formatting for development environment
+if (process.env.NODE_ENV === 'development') {
+    logger.add(
+        new winston.transports.Console({
+            format: winston.format.combine(
+                winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+                winston.format.colorize({ all: false, message: true, level: true }),
+                winston.format.printf((info) => `${info.timestamp} ${info.level}: ${info.message}`),
+            ),
+        }),
+    );
+}
 
 export default logger;

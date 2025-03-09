@@ -15,24 +15,25 @@ const parsedEnv = envSchema.safeParse({
         API_KEY: process.env.API_KEY,
         DISABLE_RATE_LIMITER: process.env.DISABLE_RATE_LIMITER,
     },
+
     firebase: {
-        PROJECT_ID: process.env.PROJECT_ID,
-        STORAGE_BUCKET: process.env.STORAGE_BUCKET,
-        PRIVATE_KEY: process.env.PRIVATE_KEY,
-        CLIENT_EMAIL: process.env.CLIENT_EMAIL,
-        DATABASE_ID: process.env.DATABASE_ID,
+        FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
+        FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET,
+        FIREBASE_PRIVATE_KEY: process.env.FIREBASE_PRIVATE_KEY,
+        FIREBASE_CLIENT_EMAIL: process.env.FIREBASE_CLIENT_EMAIL,
+        FIREBASE_DATABASE_ID: process.env.FIREBASE_DATABASE_ID,
     },
     twillo: {
-        ACCOUNT_SID: process.env.ACCOUNT_SID,
-        AUTH_TOKEN: process.env.AUTH_TOKEN,
-        SERVICE_SID: process.env.SERVICE_SID,
+        TWILO_ACCOUNT_SID: process.env.TWILO_ACCOUNT_SID,
+        TWILO_AUTH_TOKEN: process.env.TWILO_AUTH_TOKEN,
+        TWILO_SERVICE_SID: process.env.TWILO_SERVICE_SID,
     },
     sendgrid: {
-        API_KEY: process.env.API_KEY,
-        FROM_EMAIL: process.env.FROM_EMAIL,
+        SAND_GRID_API_KEY: process.env.SAND_GRID_API_KEY,
+        SAND_GRID_FROM_EMAIL: process.env.SAND_GRID_FROM_EMAIL,
     },
     template: {
-        WELCOME: process.env.WELCOME,
+        TEMPLATE_WELCOME: process.env.TEMPLATE_WELCOME,
     },
 });
 

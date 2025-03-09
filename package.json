@@ -16,8 +16,8 @@
     "dev": "cross-env NODE_ENV=development nodemon",
     "start": "cross-env NODE_ENV=production node build/src/server.js",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts --ignore-pattern 'build/**' --fix",
+    "lint:fix": "eslint . --ext .ts --ignore-pattern 'build/**' --fix",
     "prepare": "husky"
   },
   "keywords": [],

@@ -23,28 +23,36 @@ export const envSchema = z.object({
         }),
     }),
 
-    firebase: z.object({
-        PROJECT_ID: z.string(),
-        STORAGE_BUCKET: z.string(),
-        PRIVATE_KEY: z.string(),
-        CLIENT_EMAIL: z.string(),
-        DATABASE_ID: z.string(),
-    }),
+    firebase: z
+        .object({
+            FIREBASE_PROJECT_ID: z.string(),
+            FIREBASE_STORAGE_BUCKET: z.string(),
+            FIREBASE_PRIVATE_KEY: z.string(),
+            FIREBASE_CLIENT_EMAIL: z.string(),
+            FIREBASE_DATABASE_ID: z.string(),
+        })
+        .optional(),
 
-    twillo: z.object({
-        ACCOUNT_SID: z.string(),
-        AUTH_TOKEN: z.string(),
-        SERVICE_SID: z.string(),
-    }),
+    twillo: z
+        .object({
+            TWILO_ACCOUNT_SID: z.string(),
+            TWILO_AUTH_TOKEN: z.string(),
+            TWILO_SERVICE_SID: z.string(),
+        })
+        .optional(),
 
-    sendgrid: z.object({
-        API_KEY: z.string(),
-        FROM_EMAIL: z.string().email(),
-    }),
+    sendgrid: z
+        .object({
+            SAND_GRID_API_KEY: z.string(),
+            SAND_GRID_FROM_EMAIL: z.string().email(),
+        })
+        .optional(),
 
-    template: z.object({
-        WELCOME: z.string(),
-    }),
+    template: z
+        .object({
+            TEMPLATE_WELCOME: z.string(),
+        })
+        .optional(),
 });
 
 export type envType = z.TypeOf<typeof envSchema>;
