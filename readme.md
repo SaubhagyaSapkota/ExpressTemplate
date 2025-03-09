@@ -15,13 +15,13 @@ To get started with this project, follow the steps below:
 1. **Clone the repository**
 
     ```bash
-    git clone git@github.com:suman7802/express-template.git
+    git clone git@github.com:suman7802/ExpressTemplate.git
     ```
 
 2. **Navigate to the project directory**
 
     ```bash
-    cd express-template
+    cd ExpressTemplate
     ```
 
 3. **Install dependencies**
@@ -75,7 +75,7 @@ Contributions are welcome! If you'd like to enhance the project further or add n
 1. Fork the repository.
 2. Clone your forked repository:
     ```bash
-     git clone git@github.com:suman7802/express-template.git
+     git clone git@github.com:suman7802/ExpressTemplate.git
     ```
 3. Create a new branch:
     ```bash

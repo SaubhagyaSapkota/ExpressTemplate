@@ -43,8 +43,8 @@ export const envSchema = z.object({
 
     sendgrid: z
         .object({
-            SAND_GRID_API_KEY: z.string(),
-            SAND_GRID_FROM_EMAIL: z.string().email(),
+            SEND_GRID_API_KEY: z.string(),
+            SEND_GRID_FROM_EMAIL: z.string().email(),
         })
         .optional(),
 

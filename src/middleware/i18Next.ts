@@ -29,7 +29,7 @@ i18next
                 if (format === 'lowercase') return value.toLowerCase();
                 return value;
             },
-            defaultVariables: { appName: 'express-template' }, // Global variables
+            defaultVariables: { appName: 'ExpressTemplate' }, // Global variables
             skipOnVariables: true, // removes keys if variables are missing.
         },
     })
