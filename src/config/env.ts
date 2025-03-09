@@ -29,8 +29,8 @@ const parsedEnv = envSchema.safeParse({
         TWILO_SERVICE_SID: process.env.TWILO_SERVICE_SID,
     },
     sendgrid: {
-        SAND_GRID_API_KEY: process.env.SAND_GRID_API_KEY,
-        SAND_GRID_FROM_EMAIL: process.env.SAND_GRID_FROM_EMAIL,
+        SEND_GRID_API_KEY: process.env.SEND_GRID_API_KEY,
+        SEND_GRID_FROM_EMAIL: process.env.SEND_GRID_FROM_EMAIL,
     },
     template: {
         TEMPLATE_WELCOME: process.env.TEMPLATE_WELCOME,
