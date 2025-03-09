@@ -1,8 +1,8 @@
-import { v4 } from 'uuid';
 import { Request } from 'express';
+import { v4 } from 'uuid';
 
-import { ApiError } from './ApiError';
 import { env } from '../config/env';
+import { ApiError } from './ApiError';
 
 /**
  *
@@ -22,7 +22,7 @@ export const apiErrorFormat = (req: Request, error: ApiError) => {
             details: error.details,
             suggestion: error.suggestion,
 
-            ip: req.ip,
+            ip: req.clientIp,
             /**
              *  Hi folks, I have added this note to let you know that
              * @note "ip": "::ffff:192.168.18.165", is a common practice in Node.js and it's not a bug.
@@ -44,7 +44,7 @@ export const apiErrorFormat = (req: Request, error: ApiError) => {
              * @description: This is a DEV mode only feature.
              * It will show the stack trace of the error.
              */
-            stack: env.app.ENV === 'development' ? error.stack : 'Please enable DEV mode to see the stack trace',
+            stack: env.app.NODE_ENV === 'development' ? error.stack : 'Please enable DEV mode to see the stack trace',
         },
     };
 };

@@ -1,10 +1,10 @@
 import type { Request, Response } from 'express';
 import { rateLimit } from 'express-rate-limit';
 
-import { env } from './env';
-import { ApiError } from '../error/ApiError';
-import { STATUS_CODES } from '../constant/status.codes';
+import { env } from '../config/env';
 import { ERROR_CODES } from '../constant/error.codes';
+import { STATUS_CODES } from '../constant/status.codes';
+import { ApiError } from '../error/ApiError';
 
 /**
  * Hi folks! 👋
@@ -22,16 +22,17 @@ const WINDOW_IN_MILI_SECONDS = 15 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 100;
 
 export const rateLimiter = rateLimit({
-    /**
-     *
-     * @description: This is a DEV mode only feature.
-     * It will skip the rate limiter in development mode.
-     */
-    skip: (_req, _res) => env.app.DISABLE_RATE_LIMITER,
     windowMs: WINDOW_IN_MILI_SECONDS,
     max: MAX_REQUESTS_PER_WINDOW,
     standardHeaders: true,
     legacyHeaders: false,
+
+    /**
+     *
+     * @description: This is a custom skip function.
+     * It will skip the rate limiter in by DISABLE_RATE_LIMITER from the env.
+     */
+    skip: (_req, _res) => env.app.DISABLE_RATE_LIMITER,
 
     message: (req: Request, _res: Response) => ({
         error: req.t('too_many_requests_message', { ns: 'error' }),

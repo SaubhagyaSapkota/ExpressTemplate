@@ -1,25 +1,39 @@
 {
   "name": "express-template",
   "version": "1.0.0",
-  "main": "src/server.ts",
+  "description": "Express template with TypeScript",
+  "author": {
+    "name": "Suman Sharma",
+    "email": "mansu7802@gmail.com",
+    "url": "https://sumansharma.me"
+  },
+  "license": "ISC",
   "type": "commonjs",
+  "main": "src/server.ts",
   "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "build": "tsc",
-    "start": "node build/src/server.js"
+    "start": "cross-env NODE_ENV=production node build/src/server.js",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepare": "husky"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv-flow": "^4.1.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
     "express-ruid": "^1.1.5",
+    "express-slow-down": "^2.0.3",
     "express-useragent": "^1.0.15",
     "helmet": "^8.0.0",
     "i18next": "^24.2.2",
@@ -27,6 +41,7 @@
     "i18next-http-middleware": "^3.7.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
+    "request-ip": "^3.3.0",
     "uuid": "^11.1.0",
     "winston": "^3.17.0",
     "zod": "^3.24.2"
@@ -34,14 +49,25 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@types/compression": "^1.7.5",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/express-useragent": "^1.0.5",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.9",
+    "@types/request-ip": "^0.0.41",
     "eslint": "^9.21.0",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.0"
+  },
+  "lint-staged": {
+    "src/**/*{.js,ts}": [
+      "npm run lint:fix",
+      "npm run format"
+    ]
   }
 }

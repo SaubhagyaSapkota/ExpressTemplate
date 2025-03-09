@@ -7,11 +7,7 @@
         "skipLibCheck": true,
         "strict": true,
         "resolveJsonModule": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "outDir": "./build",
+        "outDir": "build",
         "sourceMap": true
     }
 }

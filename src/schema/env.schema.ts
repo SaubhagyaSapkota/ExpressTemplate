@@ -1,8 +1,15 @@
 import { z } from 'zod';
 
+/**
+ * @description
+ *  truthy values are values that are considered true
+ *  in the context of environment variables
+ */
+const TRUTHY_VALUES = ['true', 't', '1'];
+
 export const envSchema = z.object({
     app: z.object({
-        ENV: z.enum(['development', 'production', 'test']),
+        NODE_ENV: z.enum(['development', 'production', 'test']),
         PORT: z.string().transform(Number),
         METRIX_PORT: z.string().transform(Number),
         /***
@@ -12,8 +19,7 @@ export const envSchema = z.object({
         LOG_LEVEL: z.enum(['dev', 'short', 'combined', 'common', 'short', 'tiny']),
         CLIENT_URL: z.string().url(),
         DISABLE_RATE_LIMITER: z.string().transform((val) => {
-            const truthyValues = ['true', 't', '1'];
-            return truthyValues.includes(val.toLowerCase());
+            return TRUTHY_VALUES.includes(val.toLowerCase());
         }),
     }),
 

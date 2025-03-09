@@ -1,12 +1,13 @@
 import dotenvFlow from 'dotenv-flow';
+
+import logger from '../logger/winston.logger';
 import { envSchema } from '../schema/env.schema';
-import logger from './winston';
 
 dotenvFlow.config();
 
 const parsedEnv = envSchema.safeParse({
     app: {
-        ENV: process.env.ENV,
+        NODE_ENV: process.env.NODE_ENV,
         PORT: process.env.PORT,
         METRIX_PORT: process.env.METRIX_PORT,
         LOG_LEVEL: process.env.LOG_LEVEL,

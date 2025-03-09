@@ -10,5 +10,6 @@
     "invalidPackageSuggestion": "Please check the package.json file and try again.",
     "routeNotFoundMessage": "Route not found.",
     "routeNotFoundDetails": "The route you are trying to access does not exist.",
-    "routeNotFoundSuggestion": "Please check the URL and try again."
+    "routeNotFoundSuggestion": "Please check the URL and try again.",
+    "throttleing_message": "Request rate limited: Progressive delays now applied to your requests."
 }

@@ -1,4 +1,7 @@
 {
     "welcome": "Welcome to the API",
-    "good_api_health_check": "API is healthy"
+    "good_api_health_check": "API is healthy",
+    "api_slow_down_test": "API is slow down test",
+    "no_delay": "No delay",
+    "request_being_slowed_down": "Request is being slowed down"
 }

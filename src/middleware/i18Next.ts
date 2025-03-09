@@ -2,6 +2,8 @@ import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
 import middleware from 'i18next-http-middleware';
 
+import logger from '../logger/winston.logger';
+
 i18next
     .use(Backend) // Load translations from file system
     .use(middleware.LanguageDetector) // Detect language from request
@@ -30,6 +32,12 @@ i18next
             defaultVariables: { appName: 'express-template' }, // Global variables
             skipOnVariables: true, // removes keys if variables are missing.
         },
+    })
+    .then(() => {
+        logger.info('i18next initialized');
+    })
+    .catch((error) => {
+        logger.error('Error initializing i18next:', error);
     });
 
 export default middleware.handle(i18next);
