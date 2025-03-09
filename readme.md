@@ -50,10 +50,10 @@ For createing build files run `npm run build` and for running build files run `n
 
 # **Features**
 
-- Costom error class
-- Costom error handler
+- Custom error class
+- Custom error handler
 - Logging
-- Localisation
+- Localization
 - rate limiting
 - slow down
 
@@ -91,9 +91,9 @@ Contributions are welcome! If you'd like to enhance the project further or add n
     ```
 6. Open a Pull Request on GitHub.
 
-- If you encounter a bug or want to see something added/changed, please go ahead and [Open an issue](https://github.com/suman7802/express-template/issues/new/choose)
+- If you encounter a bug or want to see something added/changed, please go ahead and [Open an issue](https://github.com/suman7802/ExpressTemplate/issues/new/choose)
 
-- If you need help with something, feel free to [Start a discussion](https://github.com/suman7802/express-template/discussions/new/choose)
+- If you need help with something, feel free to [Start a discussion](https://github.com/suman7802/ExpressTemplate/discussions/new/choose)
 
 ## Contact
 
