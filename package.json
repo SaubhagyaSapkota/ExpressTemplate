@@ -18,7 +18,8 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts --ignore-pattern 'build/**' --fix",
     "lint:fix": "eslint . --ext .ts --ignore-pattern 'build/**' --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "live": "npm run build && npm run start"
   },
   "keywords": [],
   "dependencies": {
