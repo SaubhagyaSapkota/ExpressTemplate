@@ -41,7 +41,6 @@ const fileFormat = winston.format.combine(
 const transports = [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error', format: fileFormat }),
     new winston.transports.File({ filename: 'logs/info.log', level: 'info', format: fileFormat }),
-    new winston.transports.File({ filename: 'logs/http.log', level: 'http', format: fileFormat }),
 ];
 
 const logger = winston.createLogger({
