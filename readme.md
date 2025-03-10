@@ -56,6 +56,7 @@ For createing build files run `npm run build` and for running build files run `n
 - Localization
 - rate limiting
 - slow down
+- multer
 
 # Features to be added
 
@@ -65,7 +66,6 @@ For createing build files run `npm run build` and for running build files run `n
 - Sending Emails (sendgrid)
 - Authentication (passport.js)
 - Authorization
-- multer
 - API key emplemantation
 
 ## Contributing
