@@ -17,6 +17,17 @@ export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next
 
     const apiKey = req.headers['x-api-key'];
 
+    /**
+     * Here we are getting the API key from the environment variables
+     * You can also store the API key in the database
+     * or any other place you want
+     *
+     * Read more about environment variables here:
+     * https://blog.stoplight.io/api-keys-best-practices-to-authenticate-apis
+     *
+     */
+    const ourApiKey = env.app.API_KEY;
+
     if (!apiKey) {
         throw new ApiError(
             STATUS_CODES.UNAUTHORIZED,
@@ -27,7 +38,7 @@ export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next
         );
     }
 
-    if (apiKey !== env.app.API_KEY) {
+    if (apiKey !== ourApiKey) {
         throw new ApiError(
             STATUS_CODES.UNAUTHORIZED,
             ERROR_CODES.UNAUTHORIZED,
