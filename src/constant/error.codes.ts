@@ -3,4 +3,5 @@ export const ERROR_CODES = {
     GENERAL_ERROR: 'E001',
     INVALID_JSON_CONFIG: 'E002',
     ROUTE_NOT_FOUND: 'E003',
+    UNAUTHORIZED: 'E004',
 };

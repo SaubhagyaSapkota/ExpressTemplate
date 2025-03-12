@@ -1,5 +1,3 @@
-import { networkInterfaces } from 'os';
-
 import app from './app';
 import { env } from './config/env';
 import logger from './logger/winston.logger';
