@@ -18,6 +18,7 @@ export const envSchema = z.object({
          */
         LOG_LEVEL: z.enum(['dev', 'short', 'combined', 'common', 'short', 'tiny']),
         CLIENT_URL: z.string().url(),
+        API_KEY: z.string(),
         DISABLE_RATE_LIMITER: z.string().transform((val) => {
             return TRUTHY_VALUES.includes(val.toLowerCase());
         }),

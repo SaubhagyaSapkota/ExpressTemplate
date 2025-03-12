@@ -11,5 +11,13 @@
     "routeNotFoundMessage": "Route not found.",
     "routeNotFoundDetails": "The route you are trying to access does not exist.",
     "routeNotFoundSuggestion": "Please check the URL and try again.",
-    "throttleing_message": "Request rate limited: Progressive delays now applied to your requests."
+    "throttleing_message": "Request rate limited: Progressive delays now applied to your requests.",
+    "api_key_not_found_message": "API key not found",
+    "unauthorized": "Sorry, you are not authorized to access this resource.",
+    "apiKeyNotFoundMessage": "API key not found.",
+    "apiKeyNotFoundDetails": "There is no API key associated with your request.",
+    "apiKeyNotFoundSuggestion": "Please check the API key and try again",
+    "apiKeyNotMatchedMessage": "API key not matched.",
+    "apiKeyNotMatchedDetails": "The API key provided does not match the one associated with your request.",
+    "apiKeyNotMatchedSuggestion": "Please check the API key and try again later."
 }
