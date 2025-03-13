@@ -30,15 +30,15 @@ To get started with this project, follow the steps below:
     npm install
     ```
 
-4. **Run the development server**
+4. **Create .env.local file**
+
+    Create a `.env.local` file in the root of the project and add the environment variables, using env.example file.
+
+5. **Run the development server**
 
     ```bash
     npm run dev
     ```
-
-5. **Create .env.local file**
-
-    Create a `.env.local` file in the root of the project and add the environment variables. useing env.example file.
 
 6. **Open the project in your browser**
 
@@ -54,23 +54,23 @@ For createing build files run `npm run build` and for running build files run `n
 - Custom error handler
 - Logging
 - Localization
-- rate limiting
-- slow down
-- multer
+- Rate limiting
+- Slow down
+- Multer
 - API key emplemantation
 
 # Features to be added
 
 - Testing
 - Conterization
-- metrics (Analytics)
+- Metrics (Analytics)
 - Sending Emails (sendgrid)
 - Authentication (passport.js)
 - Authorization
 
 ## Contributing
 
-Contributions are welcome! If you'd like to enhance the project further or add new features, please follow these steps:
+Contributors are welcome! If you'd like to enhance the project further or add new features, please follow these steps:
 
 1. Fork the repository.
 2. Clone your forked repository:
