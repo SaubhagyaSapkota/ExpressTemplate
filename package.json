@@ -1,6 +1,6 @@
 {
   "name": "express-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Express template with TypeScript",
   "author": {
     "name": "Suman Sharma",
@@ -23,6 +23,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
     "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",

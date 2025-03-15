@@ -15,6 +15,9 @@ import asyncCatch from '../error/asyncCatch';
 export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next: NextFunction) => {
     const t = req.t;
 
+    // skip the API key verification if disabled on development
+    if (env.app.DISABLE_VALIDATE_API_KEY_ON_DEVELOPMENT) return next();
+
     const apiKey = req.headers['x-api-key'];
 
     /**
@@ -47,6 +50,9 @@ export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next
             t('apiKeyNotMatchedSuggestion', { ns: 'error' }),
         );
     }
+
+    // add apiKey to the request object
+    req.apiKey = apiKey;
 
     next();
 });

@@ -19,5 +19,11 @@
     "apiKeyNotFoundSuggestion": "Please check the API key and try again",
     "apiKeyNotMatchedMessage": "API key not matched.",
     "apiKeyNotMatchedDetails": "The API key provided does not match the one associated with your request.",
-    "apiKeyNotMatchedSuggestion": "Please check the API key and try again later."
+    "apiKeyNotMatchedSuggestion": "Please check the API key and try again later.",
+    "emailNotSentMessage": "Email not sent.",
+    "emailNotSentDetails": "An error occurred while sending the email.",
+    "emailNotSentSuggestion": "Please check your email configuration and try again later.",
+    "fileNotFountMessage": "File not found.",
+    "fileNotFountDetails": "The file you are trying to access does not exist.",
+    "fileNotFountSuggestion": "Please check the file path and try again."
 }

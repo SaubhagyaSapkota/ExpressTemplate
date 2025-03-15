@@ -48,6 +48,10 @@ By following these steps, you will have the project up and running on your local
 
 For createing build files run `npm run build` and for running build files run `npm start`.
 
+# **Documentation**
+
+> [Postman Collection](https://documenter.getpostman.com/view/27265804/2sAYkBsM99)
+
 # **Features**
 
 - Custom error class
@@ -58,13 +62,13 @@ For createing build files run `npm run build` and for running build files run `n
 - Slow down
 - Multer
 - API key emplemantation
+- Sending Emails (sendgrid)
 
 # Features to be added
 
 - Testing
 - Conterization
 - Metrics (Analytics)
-- Sending Emails (sendgrid)
 - Authentication (passport.js)
 - Authorization
 

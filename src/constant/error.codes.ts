@@ -4,4 +4,5 @@ export const ERROR_CODES = {
     INVALID_JSON_CONFIG: 'E002',
     ROUTE_NOT_FOUND: 'E003',
     UNAUTHORIZED: 'E004',
+    NOT_FOUND: 'E005',
 };
