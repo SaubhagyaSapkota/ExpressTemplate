@@ -10,3 +10,9 @@ export interface RateLimitInfo {
 export interface RequestWithRateLimit extends Request {
     rateLimit?: RateLimitInfo;
 }
+
+declare module 'express' {
+    export interface Request {
+        apiKey?: string;
+    }
+}

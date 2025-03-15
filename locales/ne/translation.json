@@ -3,5 +3,14 @@
     "good_api_health_check": "API स्वस्थ छ",
     "api_slow_down_test": "API स्लो डाउन परीक्षण",
     "no_delay": "कुनै ढिलाइ छैन",
-    "request_being_slowed_down": "अनुरोध ढिलो गरिँदैछ"
+    "request_being_slowed_down": "अनुरोध ढिलो गरिँदैछ",
+    "email_sent": "ईमेल पठाइयो",
+    "api_key_verified": "API कुञ्जी सत्यापित गरियो",
+    "localization_test": "स्थानीयकरण परीक्षण",
+    "localization_test_details": "तपाईं विभिन्न भाषामा यस पाठको अनुवाद हेर्न सक्नुहुनेछ",
+    "file_upload": "फाइल अपलोड",
+    "fileNotFountMessage": "फाइल पाइएन",
+    "fileNotFountDetails": "तपाईं जित्तै फाइलमा पहुँच्न खोज्न सक्नुहुन्छ।",
+    "fileNotFountSuggestion": "कृपया फाइल पथ जाँच गर्नुहोस् र पुन: प्रयास गर्नुहोस्।",
+    "file_uploaded_message": "फाइल सफलतापूर्वक अपलोड गरियो"
 }

@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
+import { exampleRouter } from './example.route';
 import { healthRouter } from './health.route';
-import { testRouter } from './test.route';
 
 const router = Router();
 
 router.use('/health', healthRouter);
-router.use('/test', testRouter);
+router.use('/example', exampleRouter);
 
 export default router;

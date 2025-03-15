@@ -3,5 +3,11 @@
     "good_api_health_check": "API is healthy",
     "api_slow_down_test": "API is slow down test",
     "no_delay": "No delay",
-    "request_being_slowed_down": "Request is being slowed down"
+    "request_being_slowed_down": "Request is being slowed down",
+    "email_sent": "Email sent",
+    "api_key_verified": "API key verified",
+    "localization_test": "Localization test",
+    "localization_test_details": "You can see the translation of this text in different languages",
+    "file_upload": "File upload",
+    "file_uploaded_message": "File uploaded successfully"
 }

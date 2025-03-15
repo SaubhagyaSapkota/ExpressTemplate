@@ -14,6 +14,7 @@ const parsedEnv = envSchema.safeParse({
         CLIENT_URL: process.env.CLIENT_URL,
         API_KEY: process.env.API_KEY,
         DISABLE_RATE_LIMITER: process.env.DISABLE_RATE_LIMITER,
+        DISABLE_VALIDATE_API_KEY_ON_DEVELOPMENT: process.env.DISABLE_VALIDATE_API_KEY_ON_DEVELOPMENT,
     },
 
     firebase: {
@@ -23,15 +24,18 @@ const parsedEnv = envSchema.safeParse({
         FIREBASE_CLIENT_EMAIL: process.env.FIREBASE_CLIENT_EMAIL,
         FIREBASE_DATABASE_ID: process.env.FIREBASE_DATABASE_ID,
     },
+
     twillo: {
         TWILO_ACCOUNT_SID: process.env.TWILO_ACCOUNT_SID,
         TWILO_AUTH_TOKEN: process.env.TWILO_AUTH_TOKEN,
         TWILO_SERVICE_SID: process.env.TWILO_SERVICE_SID,
     },
+
     sendgrid: {
         SEND_GRID_API_KEY: process.env.SEND_GRID_API_KEY,
         SEND_GRID_FROM_EMAIL: process.env.SEND_GRID_FROM_EMAIL,
     },
+
     template: {
         TEMPLATE_WELCOME: process.env.TEMPLATE_WELCOME,
     },
