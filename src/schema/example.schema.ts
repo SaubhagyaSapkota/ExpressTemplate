@@ -8,3 +8,11 @@ export const sendEmailSchema = z.object({
 });
 
 export type sendEmailType = z.infer<typeof sendEmailSchema>;
+
+export const metricsSchema = z.object({
+    query: z.object({
+        loop: z.string().default('0'),
+    }),
+});
+
+export type metricsType = z.infer<typeof metricsSchema>;

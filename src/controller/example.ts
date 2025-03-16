@@ -6,9 +6,8 @@ import { STATUS_CODES } from '../constant/status.codes';
 import { sendEmail } from '../email/sendgrid';
 import { ApiError } from '../error/ApiError';
 import asyncCatch from '../error/asyncCatch';
-import logger from '../logger/winston.logger';
 import { DELAY_AFTER_REQUEST_COUNT, DELAY_AFTER_REQUEST_COUNT_EXCIDED_IN_MS, WINDOW_IN_MILI_SECONDS } from '../middleware/slow-down';
-import { sendEmailType } from '../schema/example.schema';
+import { metricsType, sendEmailType } from '../schema/example.schema';
 import { RequestWithRateLimit } from '../types/types';
 import { customSuccessResponse } from '../utils/customSuccessResponse';
 
@@ -41,6 +40,7 @@ export const sendEmailExample = asyncCatch(async (req: Request<{}, {}, sendEmail
     const t = req.t;
     const payload = req.body;
 
+    // Sending email
     const [emailResponse] = await sendEmail(req, {
         templateId: env.template.TEMPLATE_WELCOME,
 
@@ -77,9 +77,9 @@ export const fileUploadExample = asyncCatch(async (req: Request, res: Response) 
         throw new ApiError(
             STATUS_CODES.NOT_FOUND,
             ERROR_CODES.NOT_FOUND,
-            t('fileNotFountMessage', { ns: 'error' }),
-            t('fileNotFountDetails', { ns: 'error' }),
-            t('fileNotFountSuggestion', { ns: 'error' }),
+            t('file_not_found_message', { ns: 'error' }),
+            t('file_not_found_details', { ns: 'error' }),
+            t('file_not_found_suggestion', { ns: 'error' }),
         );
     }
 
@@ -87,5 +87,30 @@ export const fileUploadExample = asyncCatch(async (req: Request, res: Response) 
         file: file.originalname,
         fileSize: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
         message: t('file_uploaded_message'),
+    });
+});
+
+export const exampleMetrics = asyncCatch(async (req: Request<{}, {}, {}, metricsType['query']>, res: Response) => {
+    const t = req.t;
+    const { loop } = req.query;
+    // convert the count and loop to number
+    const loopNumber = Number(loop);
+    let Loop = 0;
+
+    // Start timing
+    const startTime = Date.now();
+
+    // loop through the count and loop
+    for (let j = 0; j < loopNumber; j++) {
+        Loop++;
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+
+    // Calculate total time taken in seconds
+    const Time = (Date.now() - startTime) / 1000;
+
+    customSuccessResponse(res, 200, t('metrics_api'), {
+        message: t('metrics_api_message'),
+        details: t('metrics_api_loop_message', { time: Time, loop: Loop }),
     });
 });

@@ -46,9 +46,9 @@ export const sendEmail = async (req: Request, payload: twiloSendgridType) => {
         throw new ApiError(
             STATUS_CODES.GENERAL_ERROR,
             ERROR_CODES.GENERAL_ERROR,
-            t('emailNotSentMessage', { ns: 'error' }),
-            t('emailNotSentDetails', { ns: 'error' }),
-            t('emailNotSentSuggestion', { ns: 'error' }),
+            t('email_not_sent_message', { ns: 'error' }),
+            t('email_not_sent_details', { ns: 'error' }),
+            t('email_not_sent_suggestion', { ns: 'error' }),
         );
     }
 };

@@ -9,6 +9,7 @@ import morgan from 'morgan';
 import requestIp from 'request-ip';
 
 import { env } from './config/env';
+import { metrics, prometheus } from './metrics/prometheus';
 import { apiErrorHandler } from './middleware/apiErrorHandler';
 import i18nMiddleware from './middleware/i18Next';
 import { rateLimiter } from './middleware/rate-limiter';
@@ -73,9 +74,17 @@ app.use(express.static('public')); // Serves static files from public directory
 app.use(morgan(env.app.LOG_LEVEL)); // HTTP request logger
 
 /**
+ * PROMETHEUS MIDDLEWARE
+ * Collects and exposes application metrics
+ */
+app.use(prometheus);
+
+/**
  * ROUTES
  * Application routes and API endpoints
  */
+
+app.get('/metrics', metrics); // Exposes application metrics
 app.use('/', rootRouter); // Base routes
 app.use('/api/v0', router); // API v0 routes
 

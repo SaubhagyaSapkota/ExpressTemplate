@@ -9,7 +9,6 @@ const parsedEnv = envSchema.safeParse({
     app: {
         NODE_ENV: process.env.NODE_ENV,
         PORT: process.env.PORT,
-        METRIX_PORT: process.env.METRIX_PORT,
         LOG_LEVEL: process.env.LOG_LEVEL,
         CLIENT_URL: process.env.CLIENT_URL,
         API_KEY: process.env.API_KEY,

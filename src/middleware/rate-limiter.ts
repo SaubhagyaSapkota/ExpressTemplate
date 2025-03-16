@@ -32,7 +32,13 @@ export const rateLimiter = rateLimit({
      * @description: This is a custom skip function.
      * It will skip the rate limiter in by DISABLE_RATE_LIMITER from the env.
      */
-    skip: (_req, _res) => env.app.DISABLE_RATE_LIMITER,
+    skip: (req, _res) => {
+        // skip for metrics and health routes
+        if (req.url === '/metrics' || req.url === '/api/v0/health') return true;
+
+        // skip rate limiter if DISABLE_RATE_LIMITER is set
+        return env.app.DISABLE_RATE_LIMITER;
+    },
 
     message: (req: Request, _res: Response) => ({
         error: req.t('too_many_requests_message', { ns: 'error' }),
