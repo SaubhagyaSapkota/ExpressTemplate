@@ -63,12 +63,12 @@ For createing build files run `npm run build` and for running build files run `n
 - Multer
 - API key emplemantation
 - Sending Emails (sendgrid)
+- Metrics (Analytics)
 
 # Features to be added
 
 - Testing
 - Conterization
-- Metrics (Analytics)
 - Authentication (passport.js)
 - Authorization
 

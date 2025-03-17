@@ -22,9 +22,9 @@ export const root = asyncCatch(async (req: Request, res: Response) => {
         throw new ApiError(
             STATUS_CODES.INVALID_JSON_CONFIG,
             ERROR_CODES.INVALID_JSON_CONFIG,
-            t('invalidPackageMessage', { ns: 'error' }),
-            t('invalidPackageDetails', { ns: 'error' }),
-            t('invalidPackageSuggestion', { ns: 'error' }),
+            t('invalid_package_message', { ns: 'error' }),
+            t('invalid_package_details', { ns: 'error' }),
+            t('invalid_package_suggestion', { ns: 'error' }),
         );
     }
 

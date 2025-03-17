@@ -9,5 +9,8 @@
     "localization_test": "Localization test",
     "localization_test_details": "You can see the translation of this text in different languages",
     "file_upload": "File upload",
-    "file_uploaded_message": "File uploaded successfully"
+    "file_uploaded_message": "File uploaded successfully",
+    "metrics_api": "Metrics API",
+    "metrics_api_message": "You can see the metrics of the API",
+    "metrics_api_loop_message": "Metrics API: {{time}} seconds (Loop {{loop}})"
 }

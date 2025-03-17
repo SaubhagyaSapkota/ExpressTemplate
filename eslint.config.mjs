@@ -16,8 +16,9 @@ export default [
         ignores: ['node_modules/**', 'dist/**', 'build/**', 'coverage/**'],
         plugins: { security: eslintPluginSecurity, 'simple-import-sort': simpleImportSort },
         rules: {
+            'await-in-loop': 'off',
+            'no-await-in-loop': 'off',
             'no-console': 'error',
-            'no-await-in-loop': 'error',
             'no-duplicate-imports': 'error',
             'require-atomic-updates': 'error',
             'simple-import-sort/exports': 'error',

@@ -11,7 +11,6 @@ export const envSchema = z.object({
     app: z.object({
         NODE_ENV: z.enum(['development', 'production', 'test']),
         PORT: z.string().transform(Number),
-        METRIX_PORT: z.string().transform(Number),
         /***
          * log levels are options according to morgan
          *  for more info visit https://github.com/expressjs/morgan#readme

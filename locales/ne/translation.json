@@ -9,8 +9,11 @@
     "localization_test": "स्थानीयकरण परीक्षण",
     "localization_test_details": "तपाईं विभिन्न भाषामा यस पाठको अनुवाद हेर्न सक्नुहुनेछ",
     "file_upload": "फाइल अपलोड",
-    "fileNotFountMessage": "फाइल पाइएन",
-    "fileNotFountDetails": "तपाईं जित्तै फाइलमा पहुँच्न खोज्न सक्नुहुन्छ।",
-    "fileNotFountSuggestion": "कृपया फाइल पथ जाँच गर्नुहोस् र पुन: प्रयास गर्नुहोस्।",
-    "file_uploaded_message": "फाइल सफलतापूर्वक अपलोड गरियो"
+    "file_not_found_message": "फाइल पाइएन",
+    "file_not_found_details": "तपाईं जित्तै फाइलमा पहुँच्न खोज्न सक्नुहुन्छ।",
+    "file_not_found_suggestion": "कृपया फाइल पथ जाँच गर्नुहोस् र पुन: प्रयास गर्नुहोस्।",
+    "file_uploaded_message": "फाइल सफलतापूर्वक अपलोड गरियो",
+    "metrics_api": "मेट्रिक्स API",
+    "metrics_api_message": "तपाईं API को मेट्रिक्स हेर्न सक्नुहुनेछ",
+    "metrics_api_loop_message": "मेट्रिक्स API: {{time}} सेकेण्ड (लूप {{loop}})"
 }

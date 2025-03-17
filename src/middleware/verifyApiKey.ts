@@ -35,9 +35,9 @@ export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next
         throw new ApiError(
             STATUS_CODES.UNAUTHORIZED,
             ERROR_CODES.UNAUTHORIZED,
-            t('apiKeyNotFoundMessage', { ns: 'error' }),
-            t('apiKeyNotFoundDetails', { ns: 'error' }),
-            t('apiKeyNotFoundSuggestion', { ns: 'error' }),
+            t('api_key_not_found_message', { ns: 'error' }),
+            t('api_key_not_found_details', { ns: 'error' }),
+            t('api_key_not_found_suggestion', { ns: 'error' }),
         );
     }
 
@@ -45,9 +45,9 @@ export const verifyApiKey = asyncCatch(async (req: Request, _res: Response, next
         throw new ApiError(
             STATUS_CODES.UNAUTHORIZED,
             ERROR_CODES.UNAUTHORIZED,
-            t('apiKeyNotMatchedMessage', { ns: 'error' }),
-            t('apiKeyNotMatchedDetails', { ns: 'error' }),
-            t('apiKeyNotMatchedSuggestion', { ns: 'error' }),
+            t('api_key_not_matched_message', { ns: 'error' }),
+            t('api_key_not_matched_details', { ns: 'error' }),
+            t('api_key_not_matched_suggestion', { ns: 'error' }),
         );
     }
 
