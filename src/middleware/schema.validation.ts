@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { ERROR_CODES } from '../constant/error.codes';
 import { STATUS_CODES } from '../constant/status.codes';
 import { ApiError } from '../error/ApiError';
+import logger from '../logger/winston.logger';
 
 export default function validateSchema(schema: z.AnyZodObject) {
     return function (req: Request, res: Response, next: NextFunction) {
@@ -25,7 +26,7 @@ export default function validateSchema(schema: z.AnyZodObject) {
             return next();
         } catch (error) {
             if (error instanceof z.ZodError) {
-                throw res.status(400).send({
+                res.status(400).send({
                     statusCode: STATUS_CODES.INVALID_JSON_CONFIG,
                     message: t('schema_validation_error', { ns: 'error' }),
                     errorList: error.errors.map((e) => ({
@@ -34,7 +35,12 @@ export default function validateSchema(schema: z.AnyZodObject) {
                         field: e.path[1],
                     })),
                 });
+
+                logger.error(t('schema_validation_error', { ns: 'error' }));
+                return;
             }
+
+            logger.error(t('schema_validation_error', { ns: 'error' }));
 
             throw new ApiError(
                 STATUS_CODES.INVALID_JSON_CONFIG,
