@@ -1,0 +1,31 @@
+services:
+    server:
+        build: .
+        command: pm2-runtime ecosystem.config.js --env production
+        ports:
+            - '8080:8080'
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./:/app
+        restart: always
+
+    prometheus:
+        image: prom/prometheus
+        container_name: prometheus
+        ports:
+            - '9090:9090'
+        volumes:
+            - ./prometheus.yml:/etc/prometheus/prometheus.yml
+        restart: always
+        
+    grafana:
+        image: grafana/grafana-oss
+        container_name: grafana
+        ports:
+            - '3000:3000'
+        environment:
+            - GF_SECURITY_ADMIN_PASSWORD=admin
+        restart: always
+        depends_on:
+            - prometheus
