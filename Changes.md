@@ -1,3 +1,8 @@
+## 1.2.0 - 2025-04-09
+
+1. #### Added metrics by Containerization
+    > created `docker-compose` to run the project with Grafana and Prometheus for monitoring.
+
 ## 1.0.2 - 2025-03-17
 
 1. #### Added metrics clnfiguration

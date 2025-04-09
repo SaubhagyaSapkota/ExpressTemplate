@@ -52,6 +52,16 @@ For createing build files run `npm run build` and for running build files run `n
 
 > [Postman Collection](https://documenter.getpostman.com/view/27265804/2sAYkBsM99)
 
+# **Docker compose**
+
+### The project is equipped with a docker-compose file for easy deployment and monitoring with Grafana and Prometheus.
+
+> To run the project using Docker, follow these steps:
+
+```bash
+docker-compose up
+```
+
 # **Features**
 
 - Custom error class
@@ -64,6 +74,8 @@ For createing build files run `npm run build` and for running build files run `n
 - API key emplemantation
 - Sending Emails (sendgrid)
 - Metrics (Analytics)
+- Prometheus (containerized)
+- Grafana (containerized)
 
 # Features to be added
 
@@ -71,6 +83,7 @@ For createing build files run `npm run build` and for running build files run `n
 - Conterization
 - Authentication (passport.js)
 - Authorization
+- Grafana Loki
 
 ## Contributing
 
