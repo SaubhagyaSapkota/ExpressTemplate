@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 
-import { env } from '../config/env';
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
-import asyncCatch from '../error/asyncCatch';
+import { env } from '@/config/env';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
+import asyncCatch from '@/error/asyncCatch';
 
 /**
  * Middleware to verify the API key

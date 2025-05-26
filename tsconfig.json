@@ -1,15 +1,16 @@
 {
     "compilerOptions": {
-        "types": ["node"],
-        "target": "es2016",
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "resolveJsonModule": true,
+        "module": "CommonJS",
+        "target": "ES2019",
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": ["*"]
+        },
         "outDir": "build",
-        "sourceMap": false
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "strict": true
     },
-    "exclude": ["node_modules", "build", "dist", "public"]
+    "include": ["src"]
 }
