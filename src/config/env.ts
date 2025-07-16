@@ -1,7 +1,7 @@
 import dotenvFlow from 'dotenv-flow';
 
-import logger from '../logger/winston.logger';
-import { envSchema } from '../schema/env.schema';
+import logger from '@/logger/winston.logger';
+import { envSchema } from '@/schema/env.schema';
 
 dotenvFlow.config();
 

@@ -1,12 +1,14 @@
 import { Request, Response } from 'express';
 
+import { env } from '@/config/env';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
+import asyncCatch from '@/error/asyncCatch';
+import { customSuccessResponse } from '@/utils/customSuccessResponse';
+
+// @ts-expect-error: ignore it
 import packageJson from '../../package.json';
-import { env } from '../config/env';
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
-import asyncCatch from '../error/asyncCatch';
-import { customSuccessResponse } from '../utils/customSuccessResponse';
 
 const appName = packageJson.name;
 const appEnverionment = env.app.NODE_ENV;

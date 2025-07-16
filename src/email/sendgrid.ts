@@ -1,12 +1,12 @@
 import { Request } from 'express';
 import sgMail from '@sendgrid/mail';
 
-import { env } from '../config/env';
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
-import logger from '../logger/winston.logger';
-import { twiloSendgridType } from '../schema/sendgrid.schema';
+import { env } from '@/config/env';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
+import logger from '@/logger/winston.logger';
+import { twiloSendgridType } from '@/schema/sendgrid.schema';
 
 sgMail.setApiKey(env.sendgrid.SEND_GRID_API_KEY);
 

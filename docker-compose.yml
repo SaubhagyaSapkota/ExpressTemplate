@@ -18,7 +18,7 @@ services:
         volumes:
             - ./prometheus.yml:/etc/prometheus/prometheus.yml
         restart: always
-        
+
     grafana:
         image: grafana/grafana-oss
         container_name: grafana

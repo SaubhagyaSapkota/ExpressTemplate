@@ -8,14 +8,14 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import requestIp from 'request-ip';
 
-import { env } from './config/env';
-import { metrics, prometheus } from './metrics/prometheus';
-import { apiErrorHandler } from './middleware/apiErrorHandler';
-import i18nMiddleware from './middleware/i18Next';
-import { rateLimiter } from './middleware/rate-limiter';
-import { routeNotFoundHandler } from './middleware/route.not.found';
-import router from './router';
-import { rootRouter } from './router/root.route';
+import { env } from '@/config/env';
+import { metrics, prometheus } from '@/metrics/prometheus';
+import { apiErrorHandler } from '@/middleware/apiErrorHandler';
+import i18nMiddleware from '@/middleware/i18Next';
+import { rateLimiter } from '@/middleware/rate-limiter';
+import { routeNotFoundHandler } from '@/middleware/route.not.found';
+import router from '@/router/index';
+import { rootRouter } from '@/router/root.route';
 
 /**
  * Initialize Express application

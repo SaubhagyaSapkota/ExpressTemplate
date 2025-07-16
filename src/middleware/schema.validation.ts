@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 import { z } from 'zod';
 
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
-import logger from '../logger/winston.logger';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
+import logger from '@/logger/winston.logger';
 
 export default function validateSchema(schema: z.AnyZodObject) {
     return function (req: Request, res: Response, next: NextFunction) {

@@ -1,9 +1,9 @@
 import type { Request, Response } from 'express';
 
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
-import logger from '../logger/winston.logger';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
+import logger from '@/logger/winston.logger';
 
 /**
  * Route not found handler

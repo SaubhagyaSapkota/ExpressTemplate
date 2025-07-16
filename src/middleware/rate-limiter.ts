@@ -1,10 +1,10 @@
 import type { Request, Response } from 'express';
 import { rateLimit } from 'express-rate-limit';
 
-import { env } from '../config/env';
-import { ERROR_CODES } from '../constant/error.codes';
-import { STATUS_CODES } from '../constant/status.codes';
-import { ApiError } from '../error/ApiError';
+import { env } from '@/config/env';
+import { ERROR_CODES } from '@/constant/error.codes';
+import { STATUS_CODES } from '@/constant/status.codes';
+import { ApiError } from '@/error/ApiError';
 
 /**
  * Hi folks! 👋

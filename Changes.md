@@ -1,3 +1,6 @@
+## 1.3.0 - 2025-05-26
+    > Updated import paths to use `@` alias for cleaner imports.
+
 ## 1.2.0 - 2025-04-09
 
 1. #### Added metrics by Containerization
